@@ -126,3 +126,4 @@ if (PHP_SAPI != 'cli') {
 
 return $app;
 // [END index_php]
+?>

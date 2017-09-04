@@ -1,14 +1,14 @@
-<!doctype html>
+<!--<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<!-- disable iPhone inital scale -->
+disable iPhone inital scale 
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 <title>I. T. Tlaxiaco</title>
 <meta description="Instituto tecnol&oacute;gico de Tlaxiaco, concurso de programaci&oacute;n"/>
-<!-- main css -->
+<!-- main css 
 <link href="css/style.css" rel="stylesheet" type="text/css">
-<!-- media queries css -->
+<!-- media queries css
 <link href="css/media-queries.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
 
@@ -45,22 +45,22 @@
 				<li><a href="busqueda.php" target="Zona1">Busqueda</a></li>
 				<li><a href="marquezina.php" target="Zona1">Marquezina</a></li>
 			</ul>
-			<!-- /#main-nav --> 
+			<!-- /#main-nav  
 		</nav>
 		<form id="searchform">
 			<input type="search" id="s" placeholder="Search">
 		</form>
 	</header>
-	<!-- /#header -->
+	<!-- /#header 
 	<hr>
 	
 	
 	<div id="content" > 
-		<!--iframe width="100%" height="1090px" src="home.html" name="cont" frameborder="0" padding="0px" allowfullscreen></iframe-->	
+		<!--iframe width="100%" height="1090px" src="home.html" name="cont" frameborder="0" padding="0px" allowfullscreen></iframe	
 	<iframe  src="slaider.php" name="Zona1" width="100%" height="100%"></iframe>	
 
 	</div>
-	<!-- /#content --> 	
+	<!-- /#content 	
 	<aside id="sidebar">
 		<section class="widget">
 			<h4 class="widgettitle">Informaci&oacute;n</h4>
@@ -70,19 +70,59 @@
 				<li><a href="#">Ejemplos</a>(18)</li>
 			</ul>
 		</section>
-		<!-- /.widget -->
+		<!-- /.widget 
 		<section class="widget clearfix">
 			<h4 class="widgettitle">Galer&iacute;a</h4>
 			<script type="text/javascript" src="css/galeria.js"></script> 
 		</section>
-		<!-- /.widget -->						
+		<!-- /.widget 						
 	</aside>
-	<!-- /#sidebar -->
+	<!-- /#sidebar 
 	<footer id="footer">	
 		<p><a href="http://www.ittlaxiaco.edu.mx">www.ittlaxiaco.edu.mx</a></p>
 	</footer>
-	<!-- /#footer --> 	
+	<!-- /#footer 	
 </div>
-<!-- /#pagewrap -->
+<!-- /#pagewrap 
 </body>
-</html>
+</html>-->
+
+<?php
+
+/*
+ * Copyright 2015 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// [START index_php]
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$app = new Silex\Application();
+
+$app->get('/', function () {
+    return 'Hello World ';
+});
+
+$app->get('/goodbye', function () {
+    return 'Goodbye World';
+});
+
+// @codeCoverageIgnoreStart
+if (PHP_SAPI != 'cli') {
+    $app->run();
+}
+// @codeCoverageIgnoreEnd
+
+return $app;
+// [END index_php]

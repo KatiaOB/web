@@ -1,0 +1,4 @@
+1.-Importar la bd que esta en en el directorio respaldobd
+2.-Copiar el resto del los archivos al directorio del sitio
+3.-Agregar el codigo que esta en el archivo formularios a un iframe de una opcion del menuprincipal del sitio.
+4.-Poner a funcionar el formulario y visualizar si guarda en la bd
